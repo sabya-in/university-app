@@ -1,6 +1,6 @@
 # International Office App for THD
 
-![THD campus](thd_campus1.jpg)
+![THD campus](thd_campus.jpg)
 
 # Team members
 
