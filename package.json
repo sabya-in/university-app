@@ -1,0 +1,33 @@
+{
+  "name": "international-office-web-app",
+  "version": "1.0.0",
+  "description": "thd international application full stack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://mygit.th-deg.de/vg04861/international-office-web-app/"
+  },
+  "keywords": [
+    "thd-website",
+    "international",
+    "app"
+  ],
+  "author": "sabyasachi mondal",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body": "^5.1.0",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "^4.0.0"
+  }
+}
