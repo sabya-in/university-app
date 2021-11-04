@@ -3,14 +3,12 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const session = require("express-session");
 
 // Initialize app with express
 const app = express();
-
 
 /***** MongoDB Connection *****/
 
@@ -56,4 +54,4 @@ app.get('*', (req, res) => {
 
 // Server port
 const port = 3000;
-app.listen(port, () => console.log(`Server started on port ${port}`));
+module.exports = app.listen(port, () => console.log(`Server started on port ${port}`));
