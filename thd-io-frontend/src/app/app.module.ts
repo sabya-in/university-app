@@ -5,18 +5,22 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { I18nModule } from './i18n/i18n.module';
+import { SelectLanguageComponent } from './select-language/select-language.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
+    SelectLanguageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    I18nModule
   ],
   providers: [],
   bootstrap: [AppComponent]
