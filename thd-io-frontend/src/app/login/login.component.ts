@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -12,6 +13,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private http: HttpClient
   )
   {
 
@@ -22,6 +24,11 @@ export class LoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  submit(): void {
+    this.http.post('http://localhost:4000', this.form.getRawValue())
+      .subscribe();
   }
 
 }
