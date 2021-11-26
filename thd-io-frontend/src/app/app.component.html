@@ -1,8 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <div class="logobox"><a href=""><img src="/assets/THD-Logo.png" height="50"></a></div>
-    <span class="spacer"></span>
-    <app-select-language></app-select-language>
   </mat-toolbar-row>
   <mat-toolbar-row>
     <button mat-icon-button (click)="sidenav.toggle()" fxShow="false" fxShow.lt-sm>
@@ -13,7 +11,11 @@
       <a mat-button routerLink="/news">News</a>
       <a mat-button routerLink="/navigation">Navigation</a>
       <a mat-button routerLink="/events">Events</a>
-    </div><span class="spacer"></span>
+      <a mat-button routerLink="/login">Login</a>
+      <a mat-button routerLink="/courses">Courses</a>
+    </div>
+    <span class="spacer"></span>
+    <app-select-language></app-select-language>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container fxFlexFill>
@@ -23,6 +25,8 @@
       <a mat-button routerLink="/news">News</a>
       <a mat-button routerLink="/navigation">Navigation</a>
       <a mat-button routerLink="/events">Events</a>
+      <a mat-button routerLink="/login">Login</a>
+      <a mat-button routerLink="/courses">Courses</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="sn-content"><router-outlet></router-outlet></mat-sidenav-content>
