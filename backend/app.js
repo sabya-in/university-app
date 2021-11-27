@@ -23,10 +23,16 @@ mongoose.connection.on('error', (err) => {
    console.log(`Database error: ${err}`);
 });
 
+/***** Set cors options *****/
+
+corsOptions = {
+   origin: 'http://localhost:4200',
+   credentials: true };
+
 
 /***** Middleware *****/
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session({secret: config.secret}));
