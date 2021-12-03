@@ -1,8 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {Emitters} from '../emitter/emitter';
+import { Emitters } from '../emitter/emitter';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,8 @@ import {Emitters} from '../emitter/emitter';
 })
 export class LoginComponent implements OnInit {
 
-  authenticated = false;
+  authenticated = false || Boolean(localStorage.getItem('uname'));
+  username = localStorage.getItem('uname');
   form: FormGroup;
 
   constructor(
@@ -42,6 +43,8 @@ export class LoginComponent implements OnInit {
           let logindata = JSON.parse(JSON.stringify(res));
           if (logindata["success"]) {
             Emitters.authEmitter.emit(true);
+            localStorage.setItem('token', logindata["token"]);
+            localStorage.setItem('uname', logindata["user"]["name"]);
           } else {
             Emitters.authEmitter.emit(false);
             this.form = this.fb.group({
@@ -67,6 +70,22 @@ export class LoginComponent implements OnInit {
       username: ['', Validators.email],
       password: ['', Validators.required]
     });
+    localStorage.setItem('token', '');
+    localStorage.setItem('uname', '');
   }
 
+  profile(): void {
+    let jwt_token = localStorage.getItem('token');
+    const localheaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `${jwt_token}`
+    });
+    this.http.get('http://localhost:3000/users/profile')
+    .subscribe(res => {
+      console.log(res);
+    },
+    err => {
+      console.log(err);
+    });
+  }
 }

@@ -4,5 +4,6 @@
    "cNavText" : "Richtungen",
    "cEventText" : "Veranstaltungen",
    "cCourseText" : "Kurse",
-   "cLoginText" : "Anmelden"
+   "cLoginText" : "Anmelden",
+   "cWelcomeText" : "Willkomen"
 }
