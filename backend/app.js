@@ -44,7 +44,10 @@ require('./config/pass')(passport);
 
 // Routes
 const users = require('./routes/users');
+const news = require('./routes/news')
 app.use('/users', users);
+
+app.use('/news', news);
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -52,11 +55,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Index route
 app.get('/', (req, res) => res.send('Invalid endpoint'));
 
+
 // Redirect invalid routes
-app.get('*', (req, res) => {
-   //res.sendFile(path.join(__dirname, 'public/index.html'));
-   res.send('Invalid endpoint should redirect to Home')
-});
+// app.get('*', (req, res) => {
+//    //res.sendFile(path.join(__dirname, 'public/index.html'));
+//    res.send('Invalid endpoint should redirect to Home')
+// });
 
 // Server port
 const port = 3000;
