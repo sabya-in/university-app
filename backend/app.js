@@ -44,10 +44,12 @@ require('./config/pass')(passport);
 
 // Routes
 const users = require('./routes/users');
-const news = require('./routes/news')
+const news = require('./routes/news');
+const courses  = require('./routes/courses');
 app.use('/users', users);
 
 app.use('/news', news);
+app.use('/courses', courses);
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));

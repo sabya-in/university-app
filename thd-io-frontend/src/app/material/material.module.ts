@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const material = [
   MatToolbarModule,
@@ -25,7 +26,8 @@ const material = [
   MatListModule,
   FormsModule,
   ReactiveFormsModule,
-  MatTableModule
+  MatTableModule,
+  MatTabsModule
 
 ]
 
