@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
     routingComponents,
     SelectLanguageComponent,
     CoursesCardListComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,41 @@ const session = require("express-session");
 // Initialize app with express
 const app = express();
 
+/***** SocketIO Connection *****/
+let http = require("http").createServer(app);
+
+const io = require("socket.io")(http, {
+  cors: {
+    origins: "*",
+  },
+});
+
+const activeUsers = new Set();
+io.on("connection", async (socket) => {
+   console.log("socket id is:", socket.id);
+
+   socket.on("new user", function (data) {
+      socket.userId = data;
+      activeUsers.add(data);
+      io.emit("new user", [...activeUsers]);
+    });
+
+   socket.on("active users", (activeUsers) => {
+      socket.broadcast.to(socket.id).emit('active users', activeUsers);
+   });
+ 
+   socket.on("disconnect", () => {
+     console.log("user disconnected");
+   });
+ 
+   socket.on("message", (msg) => {
+     //socket.broadcast.emit("message", msg);
+     //socket.broadcast.to(socket.id).emit('message', msg);
+     io.emit('message', socket.userId + ' said ' + msg);
+   });
+ });
+
+
 /***** MongoDB Connection *****/
 
 const config = require('./config/db');
@@ -46,10 +81,12 @@ require('./config/pass')(passport);
 const users = require('./routes/users');
 const news = require('./routes/news');
 const courses  = require('./routes/courses');
-app.use('/users', users);
+const chat  = require('./routes/chat');
 
+app.use('/users', users);
 app.use('/news', news);
 app.use('/courses', courses);
+app.use('/chat', chat);
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -66,4 +103,4 @@ app.get('/', (req, res) => res.send('Invalid endpoint'));
 
 // Server port
 const port = 3000;
-module.exports = app.listen(port, () => console.log(`Server started on port ${port}`));
+module.exports = http.listen(port, () => console.log(`Server started on port ${port}`))

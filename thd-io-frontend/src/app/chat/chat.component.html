@@ -1,0 +1,14 @@
+<p>Chat Works!</p>
+<div class='column'>
+<div *ngFor="let message of messageList">
+    <li>
+        {{message}}
+    </li>  
+</div>
+</div>
+<div class='column'>
+</div>
+
+<input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+<button (click)="sendMessage()">Send Message</button>
+<button (click)="joinChat()">Join Chat</button>
