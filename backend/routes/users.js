@@ -9,9 +9,11 @@ const config = require("../config/db");
 
 // Register
 router.post('/register', (req, res) => {
+    console.log(req.body);
+
     let newUser = new User({
         name: req.body.name,
-        email: req.body.email,
+        email: req.body.username,
         username: req.body.username,
         password: req.body.password
     });
@@ -55,7 +57,6 @@ router.post('/login', (req, res) => {
                         id: user._id,
                         name: user.name,
                         username: user.username,
-                        email: user.email
                     }
                 });
             } else {

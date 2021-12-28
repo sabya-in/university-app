@@ -12,6 +12,8 @@ import { Emitters } from '../emitter/emitter';
 export class LoginComponent implements OnInit {
 
   authenticated = false || Boolean(localStorage.getItem('uname'));
+  registered = false;
+  message = '';
   username = localStorage.getItem('uname');
   form: FormGroup;
 
@@ -22,6 +24,7 @@ export class LoginComponent implements OnInit {
   )
   {
     this.form = this.fb.group({
+      name: ['', Validators.required],
       username: ['', Validators.email],
       password: ['', Validators.required]
     });
@@ -31,6 +34,11 @@ export class LoginComponent implements OnInit {
     Emitters.authEmitter.subscribe(
       (auth: boolean) => {
         this.authenticated = auth;
+      }
+    );
+    Emitters.createProfile.subscribe(
+      (reg: boolean) => {
+        this.registered = reg;
       }
     );
   }
@@ -45,9 +53,11 @@ export class LoginComponent implements OnInit {
             Emitters.authEmitter.emit(true);
             localStorage.setItem('token', logindata["token"]);
             localStorage.setItem('uname', logindata["user"]["name"]);
+            this.username = logindata["user"]["name"];
           } else {
             Emitters.authEmitter.emit(false);
             this.form = this.fb.group({
+              name: ['', Validators.required],
               username: ['', Validators.email],
               password: ['', Validators.required]
             });
@@ -56,9 +66,25 @@ export class LoginComponent implements OnInit {
         err => {
           Emitters.authEmitter.emit(false);
           this.form = this.fb.group({
+            name: ['', Validators.required],
             username: ['', Validators.email],
             password: ['', Validators.required]
           });
+        }
+      );
+  }
+
+  register(): void {
+    console.log(this.form.getRawValue());
+    this.http.post("http://localhost:3000/users/register", this.form.getRawValue(), {
+      withCredentials: true
+    })
+      .subscribe(res => {
+          Emitters.createProfile.emit(true);
+          this.message = JSON.parse(JSON.stringify(res))['msg'];
+        },
+        err => {
+          Emitters.createProfile.emit(false);
         }
       );
   }
@@ -67,6 +93,7 @@ export class LoginComponent implements OnInit {
     Emitters.authEmitter.emit(false);
     this.authenticated = false;
     this.form = this.fb.group({
+      name: ['', Validators.required],
       username: ['', Validators.email],
       password: ['', Validators.required]
     });
