@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import { ChatComponent } from './chat/chat.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,9 @@ import { ChatComponent } from './chat/chat.component';
   ],
   imports: [
     BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAXAQrYFTFqbFxsyLMvDtWfacxR_J0hGrk'
+    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,

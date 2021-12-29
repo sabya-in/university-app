@@ -19,6 +19,7 @@
   "author": "sabyasachi mondal",
   "license": "ISC",
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "bcryptjs": "^2.4.3",
     "body": "^5.1.0",
     "body-parser": "*",
@@ -31,6 +32,7 @@
     "mocha": "^9.1.3",
     "mongoose": "*",
     "passport": "*",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^4.4.0"
   }
 }
