@@ -5,5 +5,7 @@
    "cEventText" : "Veranstaltungen",
    "cCourseText" : "Kurse",
    "cLoginText" : "Anmelden",
-   "cWelcomeText" : "Willkommen"
+   "cWelcomeText" : "Willkommen",
+   "cCourseListText" : "Wählen einen Kurs",
+   "cMapTitleText" : "Kurs Geolocator"
 }

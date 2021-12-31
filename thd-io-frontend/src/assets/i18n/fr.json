@@ -5,5 +5,7 @@
     "cEventText" : "événements",
     "cCourseText" : "Cours",
     "cLoginText" : "Connexion",
-    "cWelcomeText" : "Bienvenue"
+    "cWelcomeText" : "Bienvenue",
+    "cCourseListText" : "sélectionner un cours",
+    "cMapTitleText" : "géolocalisateur de cours"
  }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Course} from "../model/course";
+import { CourseService } from '../services/courses.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,13 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  title = 'My first AGM project';
-  lat = 51.678418;
-  lng = 7.809007;
+  courses: Course[] = [];
+  selectedcourse?: Course;
+  title = 'All course locator';
+  lat: number = 0;
+  lon: number = 0;
 
-  constructor() { }
+  constructor(private courselist : CourseService){};
 
   ngOnInit(): void {
+      this.courselist.getCourses().subscribe(data => {
+        let res = JSON.parse(JSON.stringify(data));
+           this.courses = res['courses'];
+           console.log(this.courses);
+      });
+  }
+
+  onSelect(course: Course): void {
+    this.selectedcourse = course;
+    this.lat = course['lat'];
+    this.lon = course['lon'];
   }
 
 }
