@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import { ChatComponent } from './chat/chat.component';
 import { AgmCoreModule } from '@agm/core';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
     SelectLanguageComponent,
     CoursesCardListComponent,
     ChatComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

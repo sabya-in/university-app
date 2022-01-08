@@ -19,6 +19,9 @@
     <app-select-language></app-select-language>
   </mat-toolbar-row>
 </mat-toolbar>
+<div *ngIf="router == '/'" class="image-wrapper">
+  <img src="/assets/campus-winter-2021.webp" alt="image" height=270px width=100%>
+</div>
 <mat-sidenav-container fxFlexFill>
   <mat-sidenav #sidenav fullscreen>
     <mat-nav-list>
@@ -32,3 +35,4 @@
   </mat-sidenav>
   <mat-sidenav-content class="sn-content"><router-outlet></router-outlet></mat-sidenav-content>
 </mat-sidenav-container>
+<app-footer class="mt-auto"></app-footer>
