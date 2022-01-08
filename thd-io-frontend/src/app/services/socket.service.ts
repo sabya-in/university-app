@@ -35,8 +35,8 @@ export class SocketService {
   };
 
   public getActiveUsers = () => {
-    this.socket.on('active users', (userList) =>{
-      this.users$.next(userList);
+    this.socket.on('active users', (user) =>{
+      this.users$.next(user);
     });
     
     return this.users$.asObservable();

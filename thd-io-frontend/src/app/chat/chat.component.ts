@@ -10,17 +10,18 @@ import { SocketService } from '../services/socket.service';
 export class ChatComponent implements OnInit{
   newMessage: string | undefined;
   messageList: string[] = [];
+  userList: string[] = [];
 
   constructor(private chatService: SocketService){
 
   }
 
   ngOnInit(){
-    this.chatService.getActiveUsers().subscribe((users: string) => {
-      this.messageList.push(users);
-    });
     this.chatService.getNewMessage().subscribe((message: string) => {
       this.messageList.push(message);
+    });
+    this.chatService.getActiveUsers().subscribe((user: string) => {
+      this.userList.push(user);
     })
   }
 
@@ -39,3 +40,8 @@ export class ChatComponent implements OnInit{
   }
 
 }
+
+/* 
+Error : message is incremented by 1 each time
+Check: https://stackoverflow.com/questions/20720096/socket-io-sending-multiple-message-for-a-single-request
+*/

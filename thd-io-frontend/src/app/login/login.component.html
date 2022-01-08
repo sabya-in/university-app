@@ -17,8 +17,12 @@
       <button mat-raised-button type="submit" color="primary">Login</button>
     </form>
     <div class='btn-container' *ngIf="authenticated">
-      <button mat-raised-button class="btn logout" color="primary" (click)="logout()">Logout</button>
-      <button mat-raised-button class="btn profile" color="primary" (click)="profile()">Profile</button>
+      <div class="m-4 pb-5">
+        <button mat-raised-button class="btn logout" color="primary" (click)="logout()">Logout</button>
+      </div>
+      <div class="m-4 pb-5">
+        <button mat-raised-button class="btn profile" color="primary" (click)="profile()">Profile</button>
+      </div>
     </div>
   </mat-card-content>
   <mat-card-content>

@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss"
+              "src/custom-theme.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -95,9 +98,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss"
+              "src/custom-theme.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
+            ]
           }
         }
       }

@@ -40,7 +40,7 @@ io.on("connection", async (socket) => {
    socket.on("message", (msg) => {
      //socket.broadcast.emit("message", msg);
      //socket.broadcast.to(socket.id).emit('message', msg);
-     io.emit('message', socket.userId + ' said ' + msg);
+     io.emit('message', socket.userId + ' said: ' + msg);
    });
  });
 
