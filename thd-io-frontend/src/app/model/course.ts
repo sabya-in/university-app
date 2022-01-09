@@ -5,4 +5,6 @@ export interface Course {
   courseListIcon: string;
   longDescription: string;
   category:string;
+  lat: number;
+  lon: number;
 }

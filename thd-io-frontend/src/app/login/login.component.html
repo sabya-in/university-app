@@ -17,9 +17,40 @@
       <button mat-raised-button type="submit" color="primary">Login</button>
     </form>
     <div class='btn-container' *ngIf="authenticated">
-      <button mat-raised-button class="btn logout" color="primary" (click)="logout()">Logout</button>
-      <button mat-raised-button class="btn profile" color="primary" (click)="profile()">Profile</button>
+      <div class="m-4 pb-5">
+        <button mat-raised-button class="btn logout" color="primary" (click)="logout()">Logout</button>
+      </div>
+      <div class="m-4 pb-5">
+        <button mat-raised-button class="btn profile" color="primary" (click)="profile()">Profile</button>
+      </div>
     </div>
+  </mat-card-content>
+  <mat-card-content>
+    <form [formGroup]="form" (submit)="register()" *ngIf="!registered && !authenticated">      
+      <h1>{{'cRegisterUserText'|translate}}</h1>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Name" formControlName="name" required>
+        <mat-error>
+          Please provide a valid name
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput placeholder="Email" formControlName="username" required>
+        <mat-error>
+          Please provide a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <input matInput type="password" placeholder="Password" formControlName="password" required>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type="submit" color="primary">Register</button>
+    </form>
+  </mat-card-content>
+  <mat-card-content *ngIf="registered">
+    <h3>{{message}}</h3> 
   </mat-card-content>
   <mat-card-content *ngIf="authenticated">
     <h3>{{'cWelcomeText' | translate}} : {{username}}</h3> 

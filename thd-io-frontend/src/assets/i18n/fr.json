@@ -6,5 +6,13 @@
     "cRoomText" : "Räume",
     "cCourseText" : "Cours",
     "cLoginText" : "Connexion",
+<<<<<<< HEAD
     "cWelcomeText" : "Bienvenue"
  }
+=======
+    "cWelcomeText" : "Bienvenue",
+    "cCourseListText" : "sélectionner un cours",
+    "cMapTitleText" : "géolocalisateur de cours",
+    "cChatroomText" : "Discuter"
+ }
+>>>>>>> c05b33b6e113aea90cf336f527e724df98b8aeed

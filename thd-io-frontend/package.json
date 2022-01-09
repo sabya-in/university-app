@@ -7,10 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "extract-translations": "ng xi18n"
+    "extract-translations": "ng xi18n",
+    "compodoc": "npx compodoc -p tsconfig.doc.json"
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "@angular/animations": "~12.2.0",
     "@angular/cdk": "^12.2.12",
     "@angular/common": "~12.2.0",
@@ -24,8 +26,11 @@
     "@angular/router": "~12.2.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
     "ngx-translate-cache": "^9.0.2",
     "rxjs": "~6.6.0",
+    "socket.io-client": "^4.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
@@ -34,6 +39,7 @@
     "@angular/cli": "~12.2.10",
     "@angular/compiler-cli": "~12.2.0",
     "@angular/localize": "^12.2.13",
+    "@types/googlemaps": "^3.39.12",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",

@@ -1,0 +1,23 @@
+<p>Chats are not stored in servers!</p>
+<div class="row">
+    <div class="col-md-8">
+        <div class="container-fluid">
+            <div class="container vertical-scrollable">
+                <ul class="list-group" *ngFor="let message of messageList">
+                    <li class="list-group-item list-group-item-success">{{message}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="container-fluid">
+            <div class="m-4 pb-5">
+                <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary rounded btn-space" (click)="sendMessage()">Send Message</button>
+                <button type="button" class="btn btn-secondary rounded btn-space" (click)="joinChat()">Join Chat</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import { ChatComponent } from './chat/chat.component';
+import { AgmCoreModule } from '@agm/core';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,14 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
     routingComponents,
     SelectLanguageComponent,
     CoursesCardListComponent,
+    ChatComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAXAQrYFTFqbFxsyLMvDtWfacxR_J0hGrk'
+    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
