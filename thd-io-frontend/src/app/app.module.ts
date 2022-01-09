@@ -33,7 +33,7 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
     I18nModule
   ],
   providers: [{
-     provide: HTTP_INTERCEPTORS, useClass: InterceptorsService, multi: true 
+     provide: HTTP_INTERCEPTORS, useClass: InterceptorsService, multi: true
     }],
   bootstrap: [AppComponent]
 })

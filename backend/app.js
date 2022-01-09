@@ -7,8 +7,15 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const session = require("express-session");
 
+/**
+ * parses the requests coming from the front end
+ */
+const bodyParser= require('body-parser');
+
 // Initialize app with express
 const app = express();
+
+
 
 /***** MongoDB Connection *****/
 
@@ -46,6 +53,7 @@ require('./config/pass')(passport);
 const users = require('./routes/users');
 const news = require('./routes/news');
 const courses  = require('./routes/courses');
+const room = require('./routes/rooms')
 app.use('/users', users);
 
 app.use('/news', news);
@@ -56,6 +64,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Index route
 app.get('/', (req, res) => res.send('Invalid endpoint'));
+
+/**
+ * to handle json data
+ */
+
+ app.use(bodyParser.json());
+ app.use('/room',room);
 
 
 // Redirect invalid routes

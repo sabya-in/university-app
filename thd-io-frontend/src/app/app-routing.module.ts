@@ -5,14 +5,16 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NewsComponent } from './news/news.component';
 import { LoginComponent } from './login/login.component';
 import { CoursesComponent } from './courses/courses.component';
+import { RoomsComponent } from './rooms/rooms.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {path:'news',component : NewsComponent},
-  {path:'events',component : EventsComponent, canActivate: [AuthGuard]},
-  {path:'navigation',component : NavigationComponent, canActivate: [AuthGuard]},
+  {path:'events',component : EventsComponent},
+  {path:'navigation',component : NavigationComponent},
   {path:'login',component : LoginComponent},
-  {path:'courses',component : CoursesComponent, canActivate: [AuthGuard]}
+  {path:'courses',component : CoursesComponent},
+  {path:'rooms',component : RoomsComponent}
 ];
 
 @NgModule({
@@ -20,4 +22,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [NewsComponent, EventsComponent, NavigationComponent, LoginComponent, CoursesComponent]
+export const routingComponents = [NewsComponent, EventsComponent, NavigationComponent, LoginComponent, CoursesComponent, RoomsComponent]
