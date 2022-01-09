@@ -33,10 +33,7 @@
     "mongoose": "*",
     "passport": "*",
     "passport-jwt": "^4.0.0",
-<<<<<<< HEAD
-    "request": "^2.88.2"
-=======
+    "request": "^2.88.2",
     "socket.io": "^4.4.0"
->>>>>>> c05b33b6e113aea90cf336f527e724df98b8aeed
   }
 }
