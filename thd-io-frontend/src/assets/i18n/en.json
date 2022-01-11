@@ -6,13 +6,8 @@
     "cRoomText" : "Rooms",
     "cCourseText" : "Courses",
     "cLoginText" : "Login",
-<<<<<<< HEAD
-    "cWelcomeText" : "Willkomen"
- }
-=======
-    "cWelcomeText" : "Welcome",
+    "cWelcomeText" : "Willkomen",
     "cCourseListText" : "Select Course",
     "cMapTitleText" : "Course Geolocator",
     "cChatroomText" : "Chat"
  }
->>>>>>> c05b33b6e113aea90cf336f527e724df98b8aeed
