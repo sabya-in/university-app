@@ -1,7 +1,9 @@
 const express = require('express')
+const Courses = require('../models/courses');
 
 const router = new express.Router()
-const COURSES = [
+
+/*const COURSES = [
 
      {
         id:0,
@@ -42,10 +44,15 @@ const COURSES = [
     }
 
 ];
+*/
+
 
 
 router.get('/getCourses', (req, res) => {
-    res.status(200).json({"courses": COURSES})
+    console.log('hit');
+    courses = Courses.getCourses();
+    console.log(courses);
+    res.status(200).json({"courses": courses})
 })
 
 

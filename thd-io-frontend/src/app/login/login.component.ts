@@ -2,7 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from "../model/user";
 import { Emitters } from '../emitter/emitter';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +18,8 @@ export class LoginComponent implements OnInit {
   message = '';
   username = localStorage.getItem('uname');
   form: FormGroup;
+
+  //private _user$: BehaviorSubject<User> = new BehaviorSubject(null);
 
   constructor(
     private fb: FormBuilder,
@@ -48,12 +52,12 @@ export class LoginComponent implements OnInit {
       withCredentials: true
     })
       .subscribe(res => {
-          let logindata = JSON.parse(JSON.stringify(res));
-          if (logindata["success"]) {
+          let logindata = <User> JSON.parse(JSON.stringify(res));
+          if (logindata.success) {
             Emitters.authEmitter.emit(true);
-            localStorage.setItem('token', logindata["token"]);
-            localStorage.setItem('uname', logindata["user"]["name"]);
-            this.username = logindata["user"]["name"];
+            localStorage.setItem('token', logindata.token);
+            localStorage.setItem('uname', logindata.user.name);
+            this.username = logindata.user.name;
           } else {
             Emitters.authEmitter.emit(false);
             this.form = this.fb.group({

@@ -5,6 +5,17 @@
       <agm-marker [latitude]="lat" [longitude]="lon"></agm-marker>
     </agm-map>
 
+    <div *ngIf="selectedcourse">
+      <h2>Selected course location in interactive map above</h2>
+      <mat-form-field appearance="fill">
+      <mat-label>{{selectedcourse.description}}<span>id: </span>{{selectedcourse.id}}</mat-label>
+      <select matNativeControl required>
+        <label for="course-name">course: </label>
+        <input id="course-name" [(ngModel)]="selectedcourse.description" placeholder="description">
+      </select>
+      </mat-form-field>
+    </div>
+
     <h2>Courses</h2>
     <mat-form-field appearance="fill">
       <mat-label>{{'cCourseListText' | translate}}</mat-label>
@@ -16,17 +27,5 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-
-    <div *ngIf="selectedcourse">
-
-      <mat-form-field appearance="fill">
-      <mat-label>{{selectedcourse.description}}<span>id: </span>{{selectedcourse.id}}</mat-label>
-      <select matNativeControl required>
-        <label for="course-name">course: </label>
-        <input id="course-name" [(ngModel)]="selectedcourse.description" placeholder="description">
-      </select>
-      </mat-form-field>
-
-    </div>
 
   </div>

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'news',component : NewsComponent},
   {path:'events',component : EventsComponent},
   {path:'navigation',component : NavigationComponent},
-  {path:'chat',component : ChatComponent},
+  {path:'chat',component : ChatComponent, canActivate: [AuthGuard]},
   {path:'events',component : EventsComponent, canActivate: [AuthGuard]},
   {path:'navigation',component : NavigationComponent, canActivate: [AuthGuard]},
   {path:'login',component : LoginComponent},
