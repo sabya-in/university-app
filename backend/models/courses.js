@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-const bcrypt = require ('bcryptjs');
-const config = require ('../config/db');
 
 // Course Schema
-const CourseSchema = mongoose.Schema({
+const courseSchema = mongoose.Schema({
     description: {
-        type: String
+        type: String,
+        required: true
     },
     iconUrl: {
         type: String,
@@ -29,9 +28,4 @@ const CourseSchema = mongoose.Schema({
     }
 });
 
-const Course = module.exports = mongoose.model('Course', CourseSchema);
-
-module.exports.getCourses = (callback) => {
-    const query = {category: "rfg4"};
-    Course.findOne(query, callback);
-};
+module.exports = mongoose.model('Course', courseSchema);

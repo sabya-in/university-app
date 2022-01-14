@@ -85,14 +85,14 @@ require('./config/pass')(passport);
 // Routes
 const users = require('./routes/users');
 const news = require('./routes/news');
-const courses  = require('./routes/courses');
+const courseRouter  = require('./routes/courses');
 const room = require('./routes/rooms')
 app.use('/users', users);
 const chat  = require('./routes/chat');
 
 app.use('/users', users);
 app.use('/news', news);
-app.use('/courses', courses);
+app.use('/courses', courseRouter);
 app.use('/chat', chat);
 
 // Set static folder
