@@ -1,15 +1,4 @@
-/**
-  * models - object for data retrieval
-  */
- export interface Room {
-
-  /**
-  * id
-  */
-    id: string;
-
-  /**
-  * description
-  */
-    description: string;
+export interface Room {
+  id: string;
+  description: string;
 }

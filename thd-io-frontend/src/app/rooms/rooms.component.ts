@@ -11,18 +11,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./rooms.component.css']
 })
 export class RoomsComponent implements OnInit {
- /**
-   * Forms for validation
-   */
+
   roomsForm: FormGroup = new FormGroup({
     room: new FormControl('', Validators.required),
     date: new FormControl('', Validators.required),
     time: new FormControl('', Validators.required),
   })
 
-  /**
-   * variables
-   */
   roomsArray: Room[]
   hours = [
     '08:00',
@@ -44,7 +39,7 @@ export class RoomsComponent implements OnInit {
   newDate: string | undefined
   selectedRoom: Room | undefined
   jsonEvent = null
-  events!: Event[]
+  events: Event[] = []
   roomId : string | undefined
   roomDescription = ''
   displayedColumns: string[] = [
@@ -55,10 +50,6 @@ export class RoomsComponent implements OnInit {
   ]
   noEventFlag: boolean   | undefined
 
-
-  /**
-   * a constructor
-   */
   constructor(private _snackBar:MatSnackBar,private httpService: HttpService) {
 
     this.roomsArray = []
@@ -70,19 +61,12 @@ export class RoomsComponent implements OnInit {
     });
   }
 
-  /**
-   * Component Initialisation executed after constructor
-   */
   ngOnInit() {
     this.roomId = '';
   }
 
-  /**
-   *This function is used to find events in a specific room based on user inputs
-   */
   eventInfo() {
 
-    // finding out the date
     this.newDate =
       this.selectedDate!.getFullYear() +
       '-' +
@@ -95,7 +79,7 @@ export class RoomsComponent implements OnInit {
     this.roomDescription = this.selectedRoom!.description
 
     this.httpService
-      .getEventInfo(this.roomId, this.newDate, this.hourSelected!).subscribe(
+      .sendGetRequest(this.roomId, this.newDate, this.hourSelected!).subscribe(
       (responseBody) => {
         console.log(responseBody)
         this.jsonEvent = JSON.parse(responseBody.body)
@@ -120,9 +104,6 @@ export class RoomsComponent implements OnInit {
     });
   }
 
-  /**
-   *rooms info
-   */
   rooms = `1;A008
     2;A009 - Besprechungsraum (Buchung ü. Dekanat)
     3;A012
