@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import * as moment from 'moment';
 import { NewsService } from '../services/news.service';
+import { News } from '../model/news';
 
 @Component({
   selector: 'app-news',
@@ -10,14 +10,14 @@ import { NewsService } from '../services/news.service';
 export class NewsComponent implements OnInit {
 
   constructor(private news: NewsService) { }
-  articles = [] as any[];
-  userObj = null;
+  articles : News[] = [];
 
 
   ngOnInit(): void {
     this.news.getNews().subscribe(data => {
       let res = JSON.parse(JSON.stringify(data));
-      this.articles = res['news'];
+      this.articles = res;
+      console.log("articles : " , this.articles);
     });
 
   }

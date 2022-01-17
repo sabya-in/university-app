@@ -5,9 +5,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NewsService {
 
-  constructor(private http: HttpClient,) { }
+  private newsUrl = "http://localhost:3000/news/getNews";
+  constructor(private httpClient: HttpClient) { }
 
   getNews(){
-    return this.http.get("http://localhost:3000/news/getNews");
+    return this.httpClient.get(this.newsUrl);
+    console.log(this.httpClient.get(this.newsUrl))
   }
 }

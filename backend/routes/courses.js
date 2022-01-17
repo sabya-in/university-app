@@ -4,16 +4,12 @@ const Course = require('../models/courses');
 const router = new express.Router()
 
 
-// Getting one course
-router.get('/:id', getCourse, async (req,res) => {
-    res.send(res.course);
-})
-
-
 //Getting all courses
 router.get('/getCourses', async (req,res) => {
     try {
+        console.log("getting all courses")
         const courses = await Course.find();
+        console.log(courses)
         res.status(200).json(courses);
     }
      catch (error) {
@@ -21,6 +17,11 @@ router.get('/getCourses', async (req,res) => {
     }
 })
 
+// Getting one course
+router.get('/:id', getCourse, async (req,res) => {
+    console.log("getting single course")
+    res.send(res.course);
+})
 
 //Creating one course
 router.post('/', async (req,res) => {
