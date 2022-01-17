@@ -9,5 +9,6 @@
     "cWelcomeText" : "Willkomen",
     "cCourseListText" : "Select Course",
     "cMapTitleText" : "Course Geolocator",
-    "cChatroomText" : "Chat"
+    "cChatroomText" : "Chat",
+     "cRegisterUserText" : "Register"
  }
