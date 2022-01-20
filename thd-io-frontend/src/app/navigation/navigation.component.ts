@@ -20,8 +20,8 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
       this.courselist.getCourses().subscribe(data => {
         let res = JSON.parse(JSON.stringify(data));
-           this.courses = res['courses'];
-           console.log(this.courses);
+           this.courses = res;
+           console.log(res);
       });
   }
 
