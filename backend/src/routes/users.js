@@ -1,3 +1,44 @@
+/**
+* @api {post} /user/ register
+* @apiName Login
+*@apiParam (Parameter) {string} name Users Name.
+*@apiParam (Parameter) {string} email Users Email.
+*@apiParam (Parameter) {string} password Users Password.
+* @apiGroup User
+*
+*
+* @apiSuccessExample Success-Response:
+*     HTTP/1.1 200 OK
+* 
+{
+  
+    "user": {
+        "age": 24,
+        "adminRole": true,
+        "_id": "6017d2e61daefe11c0935c55",
+        "name": "sabyasachi",
+        "email": "user@gmail.com",
+        "__v": 3
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDE3ZDJlNjFkYWVmZTExYzA5MzVjNTUiLCJpYXQiOjE2MTIxNzczODB9.d031Duz51PkFjyTgk8EXHG-bjNtEdSOafE3TbVWy4Hk"
+
+}
+*
+* @apiError Email already exist
+*
+* @apiErrorExample Error-Response:
+*     HTTP/1.1 400 bad request
+*    
+{
+    
+    error:"E11000 duplicate key error collection: thd-api.users index: email_1 dup key: { email: \"kaber12@gmail.com\" }"
+
+}
+*       
+*     
+*/
+
+
 const express = require('express');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');

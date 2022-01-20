@@ -1,3 +1,40 @@
+/**
+* @api {post} /coursess/ getCourses
+* @apiName Courses
+*@apiParam (Parameter) {null} None.
+* @apiGroup Courses
+*
+*
+* @apiSuccessExample Success-Response:
+*     HTTP/1.1 200 OK
+* 
+{
+  
+    {
+        "id":{"$oid":"61e45aadb82b67271423b98c"},
+        "description":"Health Informatics",
+        "iconUrl":"../assets/HI.png",
+        "longDescription":"This degree course educates students to become computer scientists in the health industry",
+        "category":"BACHELOR",
+        "lat":56,
+        "lon":28,
+        "_v":0
+    }
+
+}
+*
+* @apiError Database unavailable
+*
+* @apiErrorExample Error-Response:
+*     HTTP/1.1 400 bad request
+*    
+{
+  ""
+}
+*       
+*     
+*/
+
 const express = require('express')
 const Course = require('../models/courses');
 

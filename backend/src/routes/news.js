@@ -1,3 +1,10 @@
+/**
+ * @api {get} /news/getNews
+ * @api {get} /news/:id
+ * @api {patch} /news/:id
+ * @api {delete} /news/:id
+*/
+
 const express = require('express')
 const router = new express.Router()
 const News = require('../models/news')
