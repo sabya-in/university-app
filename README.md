@@ -28,8 +28,8 @@
 
 ## Documentation folder
 
-    # frontend documentation
-    # backend documentation
+    [] frontend documentation : /international-office-web-app/backend/apidoc
+    [] backend documentation : /international-office-web-app/thd-io-frontend/apidoc
 
 ## Task divisions (as per JIRA taskboard)
 
