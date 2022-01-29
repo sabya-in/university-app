@@ -14,22 +14,22 @@
 [Link to the MyGit Repository](https://mygit.th-deg.de/vg04861/international-office-web-app.git)
 
 ## Features
-[1] Material Design
-[2] Bootstrap
-[3] User authentication
-[4] Route guards for external and logged in users
-[5] Chat between logged in users
-[6] Multilingual support
-[7] Rooms
-[8] News
-[9] Events
-[10] Interceptor for login caching
-[11] Navigation for finding courses building in google map
+1. Material Design
+2. Bootstrap
+3. User authentication
+4. Route guards for external and logged in users
+5. Chat between logged in users
+6. Multilingual support
+7. Rooms
+8. News
+9. Events
+10. Interceptor for login caching
+11. Navigation for finding courses building in google map
 
 ## Documentation folder
 
-    # frontend documentation
-    # backend documentation
+    - frontend documentation : /international-office-web-app/backend/apidoc
+    - backend documentation : /international-office-web-app/thd-io-frontend/apidoc
 
 ## Task divisions (as per JIRA taskboard)
 
