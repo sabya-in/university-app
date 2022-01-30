@@ -46,4 +46,9 @@
 | Header component, logo | Vikas Gunti |
 | News (backend api, frontend, database) | Vikas Gunti |
 | Rooms (backend api, frontend, database) | Vikas Gunti |
+| Courses page and course edit dialog (backend api, frontend, database) | Vikas Gunti |
+| Wiki page documentation | Vikas Gunti |
+| Material Design| Vikas Gunti |
+| Header and Routing | Vikas Gunti |
+| THD Corporate Identity | Vikas Gunti |
 | Frontend code refactoring and Interfaces | Vikas Gunti |
