@@ -36,5 +36,9 @@
     "request": "^2.88.2",
     "requests": "^0.3.0",
     "socket.io": "^4.4.0"
+  },
+  "apidoc": {
+    "title": "Backend documentation",
+    "url" : "https://localhost:3000"
   }
 }

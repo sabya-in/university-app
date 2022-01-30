@@ -7,13 +7,16 @@
 
     <div *ngIf="selectedcourse">
       <h2>Selected course location in interactive map above</h2>
-      <mat-form-field appearance="fill">
-      <mat-label>{{selectedcourse.description}}<span>id: </span>{{selectedcourse.id}}</mat-label>
-      <select matNativeControl required>
-        <label for="course-name">course: </label>
-        <input id="course-name" [(ngModel)]="selectedcourse.description" placeholder="description">
-      </select>
-      </mat-form-field>
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>{{selectedcourse.description}}</mat-card-title>
+          <mat-card-subtitle>{{selectedcourse.id}}</mat-card-subtitle>
+          <img mat-card-sm-image src={{selectedcourse.iconUrl}}>
+        </mat-card-title-group>
+        <mat-card-content>
+          {{selectedcourse.longDescription}}
+        </mat-card-content>
+      </mat-card>
     </div>
 
     <h2>Courses</h2>

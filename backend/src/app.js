@@ -10,6 +10,7 @@ const session = require("express-session");
 /**
  * parses the requests coming from the front end
  */
+
 const bodyParser= require('body-parser');
 
 // Initialize app with express
