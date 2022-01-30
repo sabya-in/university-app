@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha --timeout 3600",
-    "start": "node app"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,6 @@
   },
   "apidoc": {
     "title": "Backend documentation",
-    "url" : "https://localhost:3000"
+    "url": "https://localhost:3000"
   }
 }
