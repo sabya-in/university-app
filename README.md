@@ -15,16 +15,15 @@
 
 ## Features
 1. Material Design
-2. Bootstrap
-3. User authentication
-4. Route guards for external and logged in users
-5. Chat between logged in users
-6. Multilingual support
-7. Rooms
-8. News
-9. Events
-10. Interceptor for login caching
-11. Navigation for finding courses building in google map
+2. User authentication
+3. Route guards for external and logged in users
+4. Chat between logged in users
+5. Multilingual support
+6. Rooms
+7. News
+8. Events
+9. Interceptor for login caching
+10. Navigation for finding courses building in google map
 
 ## Documentation folder
 
@@ -46,7 +45,10 @@
 | Hero image, footer component | Sabyasachi |
 | Header component, logo | Vikas Gunti |
 | News (backend api, frontend, database) | Vikas Gunti |
-| Events (backend api, frontend, database) | Vikas Gunti |
 | Rooms (backend api, frontend, database) | Vikas Gunti |
-| Mensa (backend api, frontend, database) | Vikas Gunti |
+| Courses page and course edit dialog (backend api, frontend, database) | Vikas Gunti |
+| Wiki page documentation | Vikas Gunti |
+| Material Design| Vikas Gunti |
+| Header and Routing | Vikas Gunti |
+| THD Corporate Identity | Vikas Gunti |
 | Frontend code refactoring and Interfaces | Vikas Gunti |
