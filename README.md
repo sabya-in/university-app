@@ -11,7 +11,7 @@
 
 
 
-# Steps to Run the Project:
+## Steps to Run the Project:
 
  1. Clone the project https://mygit.th-deg.de/vg04861/international-office-web-app  
  2. Install **[MongoDB](https://www.mongodb.com/try/download/community)** and **[Node.js](https://nodejs.org/en/download/)** version 
@@ -25,7 +25,7 @@
  4. Navigate to `/international-office-web-app/backend` Run `npm install` to install the dependencies
  5. Navigate to `/international-office-web-app/thd-io-frontend` Run `npm install` to install the dependencies.
 
-# To Run Application:
+## To Run Application:
 
 1. Navigate to `/international-office-web-app/thd-io-frontend` and Run `ng serve` to start the application 
 2. Execute `mongod` to start the MongoDB daemon
