@@ -44,9 +44,7 @@ const router = new express.Router()
 //Getting all courses
 router.get('/getCourses', async (req,res) => {
     try {
-        console.log("getting all courses")
         const courses = await Course.find();
-        console.log(courses)
         res.status(200).json(courses);
     }
      catch (error) {
