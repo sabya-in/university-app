@@ -44,6 +44,10 @@
 
 [Link to the MyGit Repository](https://mygit.th-deg.de/vg04861/international-office-web-app.git)
 
+## Wiki
+
+[Link to the Wiki](https://mygit.th-deg.de/vg04861/international-office-web-app/-/wikis/Home-Page)
+
 ## Features
 1. Material Design
 2. User authentication
