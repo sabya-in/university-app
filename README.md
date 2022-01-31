@@ -11,7 +11,7 @@
 
 
 
-## Steps to Run the Project:
+## Prerequisites:
 
  1. Clone the project https://mygit.th-deg.de/vg04861/international-office-web-app  
  2. Install **[MongoDB](https://www.mongodb.com/try/download/community)** and **[Node.js](https://nodejs.org/en/download/)** version 
