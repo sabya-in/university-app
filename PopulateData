@@ -1,0 +1,61 @@
+
+NEWS
+
+1. 
+//Create news article
+POST http://localhost:3000/news
+Content-Type: application/json  
+
+{
+    "title": "Teaching in 2022",
+    "description": "Only students holding 2G status (i.e. vaccinated or recovered) may participate in courses and use the library. For other necessary visits to the university (examinations, collecting SHK (student assistant) contracts, other administrative activities etc.) and for picking up books from the library, the 3G+ rule continues to apply.",
+    "link": "https://www.th-deg.de/Hochschule/Standorte-DEG/campus-deggendorf-hoersaal.jpg",
+    "likes" : "2"
+}
+
+###
+2. 
+//Create a news article
+POST http://localhost:3000/news
+Content-Type: application/json  
+
+{
+    "title": "Tighter regulations concerning the winter semester",
+    "description": "As the 7-day incidence in Deggendorf is still around 1,000, for reasons of planning security, the virtual teaching will continue until Christmas, regardless of the respective daily incidence./n In events in which presence is mandatory (e.g. lab work, practicals, sporting events), 2G applies with immediate effect. This 2G status is continuously controlled by the event management. In concrete terms, this means that students who are neither vaccinated nor recovered are excluded from ALL attendance events with immediate effect.",
+    "link": "https://images.shiksha.com/mediadata/images/1632397993phpYHNUGk.jpeg",
+    "likes" : "0"
+}
+
+============================================================================================================
+
+COURSES
+
+1.
+//Create a bachelor course
+POST http://localhost:3000/courses
+Content-Type: application/json  
+
+{
+    "description": "Health Informatics",
+    "longDescription": "This degree course educates students to become computer scientists in the health industry",
+    "iconUrl": "../assets/HI.png",
+    "category": "BACHELOR",
+    "lat": 56,
+    "lon" : 28
+}
+
+###
+2. 
+//Create a  master course
+POST http://localhost:3000/courses
+Content-Type: application/json  
+
+{
+    "description": "Artificial Intelligence and Data Science",
+    "iconUrl": "../assets/AI.png",
+    "longDescription": "The Master of Artificial Intelligence and Data Science course addresses this transformation by providing you as a student with the broad and in-depth skills required to work with and develop AI",
+    "category" : "MASTER",
+    "lat": 56,
+    "lon" : 42
+}
+
