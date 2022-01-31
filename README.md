@@ -9,6 +9,33 @@
 | Vikas Gunti       | 12100861             |
 | Sabyasachi Mondal | 00821312             |
 
+
+
+# Steps to Run the Project:
+
+ 1. Clone the project https://mygit.th-deg.de/vg04861/international-office-web-app  
+ 2. Install **[MongoDB](https://www.mongodb.com/try/download/community)** and **[Node.js](https://nodejs.org/en/download/)** version 
+
+    Node: v14.18.0
+ 
+ 3. Install Angular CLI: `npm install -g @angular/cli` 
+
+    Angular CLI: v12.2.13
+
+ 4. Navigate to `/international-office-web-app/backend` Run `npm install` to install the dependencies
+ 5. Navigate to `/international-office-web-app/thd-io-frontend` Run `npm install` to install the dependencies.
+
+# To Run Application:
+
+1. Navigate to `/international-office-web-app/thd-io-frontend` and Run `ng serve` to start the application 
+2. Execute `mongod` to start the MongoDB daemon
+4. Navigate to `/international-office-web-app/backend` and Run `npm start` in the another console.
+5. Follow the link `http://127.0.0.1:4200/`
+
+
+
+
+
 ## Git Repository
 
 [Link to the MyGit Repository](https://mygit.th-deg.de/vg04861/international-office-web-app.git)
@@ -43,12 +70,11 @@
 | Chat (websocket, backend , frontend) | Sabyasachi |
 | Language component | Sabyasachi |
 | Hero image, footer component | Sabyasachi |
-| Header component, logo | Vikas Gunti |
+| Header component, logo, Routing | Vikas Gunti |
 | News (backend api, frontend, database) | Vikas Gunti |
 | Rooms (backend api, frontend, database) | Vikas Gunti |
 | Courses page and course edit dialog (backend api, frontend, database) | Vikas Gunti |
 | Wiki page documentation | Vikas Gunti |
 | Material Design| Vikas Gunti |
-| Header and Routing | Vikas Gunti |
 | THD Corporate Identity | Vikas Gunti |
 | Frontend code refactoring and Interfaces | Vikas Gunti |
