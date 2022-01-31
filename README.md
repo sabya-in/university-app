@@ -22,15 +22,19 @@
 
     Angular CLI: v12.2.13
 
+ 4. Install **[Postman](https://www.postman.com/downloads/)** 
+
  4. Navigate to `/international-office-web-app/backend` Run `npm install` to install the dependencies
  5. Navigate to `/international-office-web-app/thd-io-frontend` Run `npm install` to install the dependencies.
 
+
 ## To Run Application:
 
-1. Navigate to `/international-office-web-app/thd-io-frontend` and Run `ng serve` to start the application 
-2. Execute `mongod` to start the MongoDB daemon
-4. Navigate to `/international-office-web-app/backend` and Run `npm start` in the another console.
-5. Follow the link `http://127.0.0.1:4200/`
+1. Execute `mongod` to start the MongoDB daemon
+2. Navigate to `/international-office-web-app/backend` and Run `npm start` in the another console.
+3. Go to Postman and populate the data for (News, Courses) API with the data present in the PopulateData file .
+4. Navigate to `/international-office-web-app/thd-io-frontend` and Run `ng serve` to start the application 
+5. Follow the link `http://localhost:4200/`
 
 
 
