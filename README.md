@@ -32,7 +32,7 @@
 
 1. Execute `mongod` to start the MongoDB daemon
 2. Navigate to `/international-office-web-app/backend` and Run `npm start` in the another console.
-3. Go to Postman and populate the data for (News, Courses) API with the data present in the PopulateData file .
+3. Go to Postman and populate the data for (News, Courses) API with the data present in the [PopulateData](https://mygit.th-deg.de/vg04861/international-office-web-app/PopulateData) file .
 4. Navigate to `/international-office-web-app/thd-io-frontend` and Run `ng serve` to start the application 
 5. Follow the link `http://localhost:4200/`
 
